@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Pet Link - Play the Best Pet Matching Puzzle Game</title>
+    <link rel="canonical" href="https://dreampetlink.quest">
+    <meta name="description" content="Play Dream Pet Link, the charming puzzle game where you match cute pets to solve levels. Enjoy hours of fun with colorful graphics and addictive gameplay.">
+    <meta name="keywords" content="Dream Pet Link, pet matching game, puzzle game, online game, HTML5 game, free game">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'apple-blue': '#0071e3',
+                        'apple-gray': '#f5f5f7',
+                        'apple-dark-gray': '#86868b',
+                        'apple-black': '#1d1d1f',
+                        'apple-light-gray': '#d2d2d7',
+                        'apple-white': '#ffffff',
+                        'apple-green': '#34c759',
+                        'apple-yellow': '#ffcc00',
+                        'apple-pink': '#ff2d55',
+                        'apple-purple': '#af52de',
+                        'apple-indigo': '#5856d6',
+                        'apple-orange': '#ff9500',
+                        'apple-teal': '#5ac8fa',
+                        'apple-red': '#ff3b30',
+                        'apple-blue-light': '#34aadc'
+                    },
+                    fontFamily: {
+                        'apple-sans': ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+            .shadow-soft {
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            }
+            .bg-gradient-apple {
+                background: linear-gradient(135deg, #f5f5f7 0%, #ffffff 100%);
+            }
+            .border-gradient-blue {
+                border: 2px solid transparent;
+                background-clip: padding-box, border-box;
+                background-origin: padding-box, border-box;
+                background-image: linear-gradient(to right, #ffffff, #ffffff), linear-gradient(90deg, #0071e3, #5856d6);
+            }
+            .border-gradient-pink {
+                border: 2px solid transparent;
+                background-clip: padding-box, border-box;
+                background-origin: padding-box, border-box;
+                background-image: linear-gradient(to right, #ffffff, #ffffff), linear-gradient(90deg, #ff2d55, #af52de);
+            }
+            .border-gradient-green {
+                border: 2px solid transparent;
+                background-clip: padding-box, border-box;
+                background-origin: padding-box, border-box;
+                background-image: linear-gradient(to right, #ffffff, #ffffff), linear-gradient(90deg, #34c759, #5ac8fa);
+            }
+            .border-gradient-yellow {
+                border: 2px solid transparent;
+                background-clip: padding-box, border-box;
+                background-origin: padding-box, border-box;
+                background-image: linear-gradient(to right, #ffffff, #ffffff), linear-gradient(90deg, #ffcc00, #ff9500);
+            }
+            .bg-gradient-blue {
+                background: linear-gradient(135deg, #0071e3 0%, #5856d6 100%);
+            }
+            .bg-gradient-pink {
+                background: linear-gradient(135deg, #ff2d55 0%, #af52de 100%);
+            }
+            .bg-gradient-green {
+                background: linear-gradient(135deg, #34c759 0%, #5ac8fa 100%);
+            }
+            .bg-gradient-yellow {
+                background: linear-gradient(135deg, #ffcc00 0%, #ff9500 100%);
+            }
+            .text-gradient {
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                background-image: linear-gradient(90deg, #0071e3, #5856d6);
+            }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
+</head>
+<body class="font-apple-sans bg-apple-gray text-apple-black min-h-screen">
+    <header class="bg-apple-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <i class="fa fa-paw text-3xl text-apple-pink mr-3 animate-pulse"></i>
+                    <h1 class="text-2xl md:text-3xl font-bold text-balance text-gradient">Dream Pet Link</h1>
+                </div>
+                <nav class="flex space-x-4">
+                    <a href="#play" class="text-apple-blue hover:text-opacity-80 transition-colors duration-300 font-medium">Play Now</a>
+                    <a href="#about" class="text-apple-blue hover:text-opacity-80 transition-colors duration-300 font-medium">About</a>
+                    <a href="#how-to-play" class="text-apple-blue hover:text-opacity-80 transition-colors duration-300 font-medium">How to Play</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <main class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <section class="mb-12 text-center">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-xl md:text-2xl text-apple-dark-gray mb-6">A Charming Puzzle Adventure for All Ages</h2>
+                <p class="text-lg md:text-xl mb-8 text-apple-black leading-relaxed">
+                    Connect matching pets in this delightful puzzle game. With colorful graphics, cute characters, and challenging levels, Dream Pet Link offers endless entertainment for puzzle lovers everywhere.
+                </p>
+                <a href="#play" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-lg font-medium rounded-full shadow-md text-white bg-gradient-blue hover:opacity-90 transition-all duration-300 transform hover:scale-105">
+                    <i class="fa fa-play-circle mr-2"></i> Play Now
+                </a>
+            </div>
+        </section>
+        
+        <!-- Game Play Section -->
+        <section id="play" class="mb-16">
+            <div class="bg-apple-white rounded-xl shadow-soft p-4 md:p-6 border-gradient-blue">
+                <h2 class="text-2xl font-bold mb-4 text-gradient">Play Dream Pet Link</h2>
+                <div class="aspect-[16/9] w-full bg-apple-black rounded-lg overflow-hidden shadow-inner">
+                    <iframe src="https://html5.gamedistribution.com/rvvASMiM/f9de399f8d324adc828279e73f43951c/index.html" width="100%" height="100%" frameborder="0" allowfullscreen class="transition-all duration-300 hover:opacity-95 hover:scale-[1.01]"></iframe>
+                </div>
+                <div class="mt-4 text-center text-sm text-apple-dark-gray">
+                    <p>Click "Allow" in the game to enable sound and full functionality</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About the Game Section -->
+        <section id="about" class="mb-16 grid md:grid-cols-2 gap-8">
+            <div class="bg-apple-white rounded-xl shadow-soft p-6 border-gradient-blue card-hover">
+                <div class="flex items-center mb-4">
+                    <i class="fa fa-info-circle text-2xl text-apple-blue mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gradient">About the Game</h2>
+                </div>
+                <p class="mb-4 leading-relaxed text-apple-black">
+                    Dream Pet Link is a captivating puzzle game that challenges players to connect matching pet icons with lines. The game features colorful graphics, cute animal characters, and progressively challenging levels that will keep you entertained for hours.
+                </p>
+                <p class="mb-4 leading-relaxed text-apple-black">
+                    Whether you're looking for a quick casual game or a longer puzzle-solving session, Dream Pet Link offers gameplay that adapts to your style. The intuitive interface makes it easy for players of all ages to pick up and enjoy.
+                </p>
+                <ul class="space-y-2">
+                    <li class="flex items-start">
+                        <i class="fa fa-check-circle text-apple-green mt-1 mr-2"></i>
+                        <span>Hundreds of challenging levels</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fa fa-check-circle text-apple-green mt-1 mr-2"></i>
+                        <span>Cute and colorful pet characters</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fa fa-check-circle text-apple-blue-light mt-1 mr-2"></i>
+                        <span>Smooth and responsive gameplay</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fa fa-check-circle text-apple-purple mt-1 mr-2"></i>
+                        <span>Suitable for players of all ages</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="bg-apple-white rounded-xl shadow-soft p-6 border-gradient-pink card-hover">
+                <div class="flex items-center mb-4">
+                    <i class="fa fa-gamepad text-2xl text-apple-pink mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gradient">Game Features</h2>
+                </div>
+                <div class="space-y-4">
+                    <div class="p-4 bg-apple-gray rounded-lg hover:bg-opacity-70 transition-colors duration-300">
+                        <h3 class="font-semibold mb-2 text-apple-indigo">Progressive Difficulty</h3>
+                        <p class="text-apple-dark-gray">Start with simple levels and progress to more complex puzzles as your skills improve.</p>
+                    </div>
+                    <div class="p-4 bg-apple-gray rounded-lg hover:bg-opacity-70 transition-colors duration-300">
+                        <h3 class="font-semibold mb-2 text-apple-orange">Time Challenges</h3>
+                        <p class="text-apple-dark-gray">Beat the clock to earn extra points and rewards in timed levels.</p>
+                    </div>
+                    <div class="p-4 bg-apple-gray rounded-lg hover:bg-opacity-70 transition-colors duration-300">
+                        <h3 class="font-semibold mb-2 text-apple-purple">Power-Ups</h3>
+                        <p class="text-apple-dark-gray">Use special power-ups to help you solve challenging levels and achieve high scores.</p>
+                    </div>
+                    <div class="p-4 bg-apple-gray rounded-lg hover:bg-opacity-70 transition-colors duration-300">
+                        <h3 class="font-semibold mb-2 text-apple-teal">Offline Play</h3>
+                        <p class="text-apple-dark-gray">Enjoy the game even without an internet connection, perfect for on-the-go gaming.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- How to Play Section -->
+        <section id="how-to-play" class="mb-16">
+            <div class="bg-gradient-apple rounded-xl shadow-soft p-6 border-gradient-yellow">
+                <div class="flex items-center mb-6">
+                    <i class="fa fa-question-circle text-2xl text-apple-yellow mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gradient">How to Play</h2>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-apple-white rounded-lg p-5 shadow-sm border-2 border-transparent hover:border-apple-blue transition-all duration-300 card-hover">
+                        <div class="w-12 h-12 bg-apple-blue bg-opacity-10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                            <i class="fa fa-mouse-pointer text-xl text-apple-blue"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-3 text-center text-apple-blue">Connect Matching Pets</h3>
+                        <p class="text-apple-dark-gray text-center">Click on two identical pet icons to connect them with a line. The line can't have more than three turns.</p>
+                    </div>
+                    
+                    <div class="bg-apple-white rounded-lg p-5 shadow-sm border-2 border-transparent hover:border-apple-pink transition-all duration-300 card-hover">
+                        <div class="w-12 h-12 bg-apple-pink bg-opacity-10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                            <i class="fa fa-clock-o text-xl text-apple-pink"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-3 text-center text-apple-pink">Beat the Clock</h3>
+                        <p class="text-apple-dark-gray text-center">Complete each level before the time runs out to advance to the next challenge.</p>
+                    </div>
+                    
+                    <div class="bg-apple-white rounded-lg p-5 shadow-sm border-2 border-transparent hover:border-apple-green transition-all duration-300 card-hover">
+                        <div class="w-12 h-12 bg-apple-green bg-opacity-10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                            <i class="fa fa-star text-xl text-apple-green"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-3 text-center text-apple-green">Earn Stars</h3>
+                        <p class="text-apple-dark-gray text-center">Complete levels with remaining time to earn up to three stars and unlock special content.</p>
+                    </div>
+                </div>
+                
+                <div class="mt-8 p-5 bg-apple-white rounded-lg shadow-sm border-gradient-blue">
+                    <h3 class="text-lg font-semibold mb-3 text-apple-indigo">Gameplay Tips</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fa fa-lightbulb-o text-apple-yellow mt-1 mr-3"></i>
+                            <span>Start from the edges of the board and work your way towards the center.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-lightbulb-o text-apple-orange mt-1 mr-3"></i>
+                            <span>Look for long chains of matching pets to clear multiple pairs at once.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-lightbulb-o text-apple-purple mt-1 mr-3"></i>
+                            <span>Use power-ups strategically to help you when you're stuck on a difficult level.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-lightbulb-o text-apple-teal mt-1 mr-3"></i>
+                            <span>Take your time and plan your moves carefully to maximize your score.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call to Action Section -->
+        <section class="text-center mb-12">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-2xl font-bold mb-4">Ready to Start Matching?</h2>
+                <p class="text-lg mb-8 text-apple-dark-gray">Join thousands of players enjoying Dream Pet Link. Play now and see how many levels you can complete!</p>
+                <a href="#play" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-full shadow-lg text-white bg-gradient-pink hover:opacity-90 transition-all duration-300 transform hover:scale-105">
+                    <i class="fa fa-gamepad mr-2"></i> Play Dream Pet Link Now
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-apple-white shadow-inner py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <i class="fa fa-paw text-2xl text-apple-pink mr-2 animate-pulse"></i>
+                    <span class="text-lg font-bold text-gradient">Dream Pet Link</span>
+                </div>
+                <div class="flex space-x-6 mb-4 md:mb-0">
+                    <a href="#play" class="text-apple-dark-gray hover:text-apple-blue transition-colors duration-300">
+                        <i class="fa fa-play-circle text-xl"></i>
+                    </a>
+                    <a href="#about" class="text-apple-dark-gray hover:text-apple-blue transition-colors duration-300">
+                        <i class="fa fa-info-circle text-xl"></i>
+                    </a>
+                    <a href="#how-to-play" class="text-apple-dark-gray hover:text-apple-blue transition-colors duration-300">
+                        <i class="fa fa-question-circle text-xl"></i>
+                    </a>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-sm text-apple-dark-gray">© 2023 Dream Pet Link. All rights reserved.</p>
+                    <p class="text-xs text-apple-dark-gray mt-1">Played on <a href="https://dreampetlink.quest" class="underline hover:text-apple-blue">dreampetlink.quest</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Add animation to elements when they come into view
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-4');
+                }
+            });
+        }, observerOptions);
+        
+        // Apply animation to sections
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-4');
+            observer.observe(section);
+        });
+        
+        // Preload the game iframe for better user experience
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const gameIframe = document.querySelector('iframe');
+                if (gameIframe) {
+                    gameIframe.src = gameIframe.src;
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
